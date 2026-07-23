@@ -29,6 +29,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: siteConfig.brand.assets.icon64, type: "image/png", sizes: "64x64" },
+      { url: siteConfig.brand.assets.icon192, type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_AU",
@@ -37,12 +46,21 @@ export const metadata: Metadata = {
     title: `Emergency Suzi Cable Replacement Sydney | ${siteConfig.brand.name}`,
     description:
       "On-demand Suzi cable and trailer electrical delivery across Sydney. Call, WhatsApp, or book online.",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.brand.name} — Emergency Suzi Cable Delivery Sydney`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Emergency Suzi Cable Replacement Sydney | ${siteConfig.brand.name}`,
     description:
       "On-demand Suzi cable and trailer electrical delivery across Sydney. Call, WhatsApp, or book online.",
+    images: ["/og-default.png"],
   },
   robots: {
     index: true,
@@ -59,7 +77,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "AutomotiveBusiness",
     name: siteConfig.brand.name,
-    image: `${siteConfig.brand.url}/opengraph-image`,
+    logo: `${siteConfig.brand.url}${siteConfig.brand.assets.icon512}`,
+    image: `${siteConfig.brand.url}${siteConfig.brand.assets.icon512}`,
     url: siteConfig.brand.url,
     telephone: siteConfig.contact.phoneE164,
     areaServed: siteConfig.hub.areaServed.map((area) => ({

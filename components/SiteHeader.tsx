@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { telHref, whatsappHref } from "@/lib/utils";
@@ -14,13 +15,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border-subtle bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            {siteConfig.brand.name}
-          </span>
-          <span className="text-[10px] uppercase tracking-wide text-foreground-muted">
-            {siteConfig.brand.parentLine}
-          </span>
+        <Link href="/" className="flex items-center">
+          {/* White wordmark in this file — header background must stay dark. */}
+          <Image
+            src={siteConfig.brand.assets.logoDarkBg600}
+            alt={siteConfig.brand.name}
+            width={600}
+            height={140}
+            priority
+            className="h-8 w-auto sm:h-10"
+          />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-6 lg:flex">

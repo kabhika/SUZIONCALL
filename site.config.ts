@@ -37,6 +37,16 @@ export const siteConfig = {
     url: "https://suzioncall.com.au",
     abn: "51690335034",
     locale: "en-AU",
+    assets: {
+      // Full lockup has a white wordmark — dark backgrounds ONLY.
+      logoDarkBg: "/brand/logo-dark-bg.png",
+      logoDarkBg600: "/brand/logo-dark-bg-600w.png",
+      // Standalone shield icon — safe on light or dark backgrounds.
+      icon: "/brand/icon.png",
+      icon512: "/brand/icon-512.png",
+      icon192: "/brand/icon-192.png",
+      icon64: "/brand/icon-64.png",
+    },
   },
   contact: {
     phoneDisplay: "0467 604 791",

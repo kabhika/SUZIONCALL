@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 :root {
+  /* Sampled from brand-src icon via scripts/prep-brand.mjs */
+  --brand-amber: #fcb41c;
+  --brand-ink: #0c0c0c;
   --background: #0b0e13;
   --surface: #121821;
   --surface-raised: #1a222e;
   --border-subtle: #26303e;
   --foreground: #f3f5f7;
   --foreground-muted: #a8b2c0;
-  --accent: #f5a524;
+  --accent: var(--brand-amber);
   --accent-strong: #ff8a1e;
   --accent-foreground: #1a1103;
   --danger: #ef4444;
@@ -15,6 +18,8 @@
 }
 
 @theme inline {
+  --color-brand-amber: var(--brand-amber);
+  --color-brand-ink: var(--brand-ink);
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-raised: var(--surface-raised);

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# brand source originals (8k/4k masters, kept local only — see brand-src/README.md)
+brand-src/*
+!brand-src/README.md

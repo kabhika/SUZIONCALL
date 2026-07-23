@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig, cableCategories, areaPages } from "@/site.config";
 import { telHref } from "@/lib/utils";
@@ -10,8 +11,15 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold text-foreground">{siteConfig.brand.name}</p>
-            <p className="mt-1 text-xs uppercase tracking-wide text-foreground-muted">
+            {/* White wordmark in this file — footer background must stay dark. */}
+            <Image
+              src={siteConfig.brand.assets.logoDarkBg600}
+              alt={siteConfig.brand.name}
+              width={600}
+              height={140}
+              className="h-8 w-auto"
+            />
+            <p className="mt-2 text-xs uppercase tracking-wide text-foreground-muted">
               {siteConfig.brand.parentLine}
             </p>
             <p className="mt-4 text-sm text-foreground-muted">
