@@ -46,6 +46,7 @@ function SubmitButton() {
   );
 }
 
+// TODO v2: add optional photo upload of the damaged plug/cable to speed up identification.
 export function BookingForm() {
   const [state, formAction] = useActionState(submitBooking, initialState);
   const [hasStarted, setHasStarted] = useState(false);
