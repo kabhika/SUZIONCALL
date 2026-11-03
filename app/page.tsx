@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { ProductGallery } from "@/components/ProductGallery";
 import { siteConfig } from "@/site.config";
 import { EmergencyCTAGroup } from "@/components/EmergencyCTAGroup";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -39,7 +41,8 @@ export default function Home() {
       <JsonLd data={serviceJsonLd} />
 
       <section className="relative overflow-hidden border-b border-border-subtle bg-gradient-to-b from-surface to-background">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_1fr]">
+          <div>
           <span className="text-sm font-semibold uppercase tracking-wide text-accent">
             {siteConfig.hub.displayLocation} · Sydney Metro & Beyond
           </span>
@@ -51,15 +54,22 @@ export default function Home() {
             replacement Suzi cable or connector to your breakdown location or depot, with
             optional professional installation.
           </p>
-          <EmergencyCTAGroup className="mt-8" />
+          <EmergencyCTAGroup className="mt-8 flex-wrap" />
           <p className="mt-4 text-xs text-foreground-muted">
             Fleet, caravan, camper trailer, and horse float electrical connections. Call or
             WhatsApp for the fastest response.
           </p>
+          <a href="#cable-gallery" className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-accent underline underline-offset-4">Explore cables & connections ↓</a>
+          </div>
+          <figure className="overflow-hidden rounded-2xl border border-border-subtle bg-[#edf0f2]">
+            <Image src="/products/hero.webp" alt="Illustrative range of truck trailer electrical coils and red and blue air lines" width={1536} height={1024} priority sizes="(min-width: 1024px) 480px, 95vw" className="h-auto w-full" />
+            <figcaption className="border-t border-black/10 px-5 py-3 text-xs text-slate-600">Electrical · Braking · Air lines · Adapters<br />Illustrative range. Exact product confirmed before dispatch.</figcaption>
+          </figure>
         </div>
       </section>
 
       <HowItWorks />
+      <ProductGallery />
       <AudienceBands />
       <CableTypesGrid />
       <DeliveryTiers />
