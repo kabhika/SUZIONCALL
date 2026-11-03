@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { ProductGallery } from "@/components/ProductGallery";
 import { siteConfig } from "@/site.config";
 import { EmergencyCTAGroup } from "@/components/EmergencyCTAGroup";
@@ -61,10 +61,7 @@ export default function Home() {
           </p>
           <a href="#cable-gallery" className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-accent underline underline-offset-4">Explore cables & connections ↓</a>
           </div>
-          <figure className="overflow-hidden rounded-2xl border border-border-subtle bg-[#edf0f2]">
-            <Image src="/products/hero.webp" alt="Illustrative range of truck trailer electrical coils and red and blue air lines" width={1536} height={1024} priority sizes="(min-width: 1024px) 480px, 95vw" className="h-auto w-full" />
-            <figcaption className="border-t border-black/10 px-5 py-3 text-xs text-slate-600">Electrical · Braking · Air lines · Adapters<br />Illustrative range. Exact product confirmed before dispatch.</figcaption>
-          </figure>
+          <HeroCarousel />
         </div>
       </section>
 
