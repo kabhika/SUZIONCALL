@@ -26,6 +26,8 @@ for (const asset of inputs.generated) {
 }
 for (const asset of inputs.enhanced) {
   await sharp(asset.path).resize({height:4096}).png().toFile(path.join(deliveryDir, `${asset.id}-ai.png`));
+  const stockId = asset.id.replace('enhanced-', 'stock-');
+  await sharp(asset.path).resize({height:1400}).webp({quality:87}).toFile(path.join(publicDir, `${stockId}-enhanced.webp`));
   manifest.push({id:asset.id,type:'AI-enhanced interpretation of supplied photo; inspect against original before using for exact product identification'});
 }
 await fs.writeFile(path.join(deliveryDir, 'manifest.json'), JSON.stringify(manifest,null,2));
