@@ -10,36 +10,19 @@ const slides = [
     src: `/products/${product.id}${product.id.startsWith("stock-") ? "-enhanced" : ""}.webp`,
     name: product.name,
     detail: product.vehicles,
-    kind: product.kind,
+    kind: product.id.startsWith("stock-") ? "Enhanced product photo" : product.kind,
   })),
 ];
 
 export function HeroCarousel() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(true);
-  const [hovered, setHovered] = useState(false);
-  const [focused, setFocused] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const syncMotion = () => setPaused(motion.matches);
-    const syncVisibility = () => setHidden(document.hidden);
-    syncMotion();
-    syncVisibility();
-    motion.addEventListener("change", syncMotion);
-    document.addEventListener("visibilitychange", syncVisibility);
-    return () => {
-      motion.removeEventListener("change", syncMotion);
-      document.removeEventListener("visibilitychange", syncVisibility);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (paused || hovered || focused || hidden) return;
-    const timer = window.setInterval(() => setActive((current) => (current + 1) % slides.length), 5000);
-    return () => window.clearInterval(timer);
-  }, [paused, hovered, focused, hidden, active]);
+    if (paused) return;
+    const timer = window.setTimeout(() => setActive((current) => (current + 1) % slides.length), 5000);
+    return () => window.clearTimeout(timer);
+  }, [paused, active]);
 
   const changeSlide = (direction: number) => setActive((current) => (current + direction + slides.length) % slides.length);
   const slide = slides[active];
@@ -49,12 +32,6 @@ export function HeroCarousel() {
       aria-label="Our cable range"
       aria-roledescription="carousel"
       className="min-w-0 overflow-hidden rounded-2xl border border-border-subtle bg-surface"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onFocusCapture={() => setFocused(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setFocused(false);
-      }}
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-[#edf0f2]">
         {slides.map((item, index) => (
@@ -72,7 +49,7 @@ export function HeroCarousel() {
       </div>
       <div className="px-5 pt-5" aria-live={paused ? "polite" : "off"} aria-atomic="true">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-[10px] uppercase tracking-widest text-accent">{slide.kind}</p>
+          <p className="text-xs text-foreground-muted">{slide.kind}</p>
           <span className="shrink-0 text-xs tabular-nums text-foreground-muted">{active + 1} / {slides.length}</span>
         </div>
         <h2 className="mt-2 min-h-12 text-base font-semibold leading-6">{slide.name}</h2>
@@ -80,7 +57,7 @@ export function HeroCarousel() {
       </div>
       <div className="flex items-center justify-between gap-3 px-5">
         <button type="button" onClick={() => changeSlide(-1)} aria-label="Previous cable image" className="tap-target rounded-md border border-border-subtle px-4 text-lg hover:border-accent focus-visible:outline-2 focus-visible:outline-accent">←</button>
-        <button type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play slideshow" : "Pause slideshow"} className="tap-target rounded-md px-4 text-xs font-semibold text-foreground-muted hover:text-accent focus-visible:outline-2 focus-visible:outline-accent">{paused ? "▶ Play" : "Ⅱ Pause"}</button>
+        <button type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play slideshow" : "Pause slideshow"} title={paused ? "Play slideshow" : "Pause slideshow"} className="tap-target rounded-md text-sm text-foreground-muted hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"><span aria-hidden="true">{paused ? "▶" : "Ⅱ"}</span></button>
         <button type="button" onClick={() => changeSlide(1)} aria-label="Next cable image" className="tap-target rounded-md border border-border-subtle px-4 text-lg hover:border-accent focus-visible:outline-2 focus-visible:outline-accent">→</button>
       </div>
       <div className="flex flex-wrap justify-center px-3 py-1" aria-label="Choose a cable image">
