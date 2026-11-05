@@ -19,6 +19,23 @@ export function HeroCarousel() {
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    let resumeTimer: number | undefined;
+    const pauseOnClick = () => {
+      setPaused(true);
+      window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(() => {
+        setActive((current) => (current + 1) % slides.length);
+        setPaused(false);
+      }, 10000);
+    };
+    document.addEventListener("click", pauseOnClick, true);
+    return () => {
+      document.removeEventListener("click", pauseOnClick, true);
+      window.clearTimeout(resumeTimer);
+    };
+  }, []);
+
+  useEffect(() => {
     if (paused) return;
     const timer = window.setTimeout(() => setActive((current) => (current + 1) % slides.length), 5000);
     return () => window.clearTimeout(timer);
@@ -57,7 +74,6 @@ export function HeroCarousel() {
       </div>
       <div className="flex items-center justify-between gap-3 px-5">
         <button type="button" onClick={() => changeSlide(-1)} aria-label="Previous cable image" className="tap-target rounded-md border border-border-subtle px-4 text-lg hover:border-accent focus-visible:outline-2 focus-visible:outline-accent">←</button>
-        <button type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play slideshow" : "Pause slideshow"} title={paused ? "Play slideshow" : "Pause slideshow"} className="tap-target rounded-md text-sm text-foreground-muted hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"><span aria-hidden="true">{paused ? "▶" : "Ⅱ"}</span></button>
         <button type="button" onClick={() => changeSlide(1)} aria-label="Next cable image" className="tap-target rounded-md border border-border-subtle px-4 text-lg hover:border-accent focus-visible:outline-2 focus-visible:outline-accent">→</button>
       </div>
       <div className="flex flex-wrap justify-center px-3 py-1" aria-label="Choose a cable image">
