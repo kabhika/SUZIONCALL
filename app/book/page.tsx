@@ -6,7 +6,7 @@ import { EmergencyCTAGroup } from "@/components/EmergencyCTAGroup";
 export const metadata: Metadata = {
   title: "Book a Callback | Emergency Suzi Cable Delivery",
   description:
-    "Request a callback for emergency Suzi cable delivery in Sydney. Under 60 seconds. Phone and WhatsApp always available.",
+    "Request a callback for emergency Suzi cable delivery in Sydney. Under 60 seconds. Phone always available.",
   alternates: { canonical: "/book" },
 };
 

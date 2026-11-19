@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.brand.name}`,
   },
   description:
-    "On-demand Suzi cable and trailer electrical delivery across Sydney. Call, WhatsApp, or book online and we dispatch the right cable to your breakdown location.",
+    "On-demand Suzi cable and trailer electrical delivery across Sydney. Call or book online and we dispatch the right cable to your breakdown location.",
   applicationName: siteConfig.brand.name,
   authors: [{ name: siteConfig.brand.name }],
   alternates: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: siteConfig.brand.url,
     title: `Emergency Suzi Cable Replacement Sydney | ${siteConfig.brand.name}`,
     description:
-      "On-demand Suzi cable and trailer electrical delivery across Sydney. Call, WhatsApp, or book online.",
+      "On-demand Suzi cable and trailer electrical delivery across Sydney. Call or book online.",
     images: [
       {
         url: "/og-default.png",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Emergency Suzi Cable Replacement Sydney | ${siteConfig.brand.name}`,
     description:
-      "On-demand Suzi cable and trailer electrical delivery across Sydney. Call, WhatsApp, or book online.",
+      "On-demand Suzi cable and trailer electrical delivery across Sydney. Call or book online.",
     images: ["/og-default.png"],
   },
   robots: {

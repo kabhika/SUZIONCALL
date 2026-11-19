@@ -1,5 +1,5 @@
 // Single source of truth for brand, contact, and business data.
-// Update phone/WhatsApp/hours/areas here — every page reads from this file.
+// Update phone/hours/areas here — every page reads from this file.
 
 export type CableCategory = {
   slug: string;
@@ -54,8 +54,6 @@ export const siteConfig = {
   contact: {
     phoneDisplay: "0430 825 007",
     phoneE164: "+61430825007",
-    // WhatsApp goes to the primary line (Pushpinder), which handles cable identification.
-    whatsappE164: "61430825007",
     email: "info@suzioncall.com.au",
     // Both numbers on one line on CTA buttons — no names on the site.
     phonesInlineDisplay: "0430 825 007 / 0467 604 791",
@@ -75,8 +73,6 @@ export const siteConfig = {
     // TODO: add Google Business Profile URL once created
     googleBusinessProfileUrl: "",
   },
-  whatsappMessageTemplate: (brand: string) =>
-    `Hi ${brand}, I need an emergency Suzi cable. Location: ___. Vehicle: ___. Issue: ___. Please call back.`,
 };
 
 export const deliveryTiers: DeliveryTier[] = [

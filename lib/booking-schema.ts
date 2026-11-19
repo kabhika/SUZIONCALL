@@ -30,7 +30,7 @@ export const cableTypeOptions = [
 
 export const urgencyOptions = ["stranded_now", "today", "this_week"] as const;
 
-export const preferredContactOptions = ["call", "whatsapp"] as const;
+export const preferredContactOptions = ["call"] as const;
 
 export const bookingSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),

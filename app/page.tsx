@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Emergency Suzi Cable Replacement Sydney",
   description:
-    "Suzi cable and trailer electrical failure? We deliver the replacement to your breakdown location across Sydney. Call, WhatsApp, or book online now.",
+    "Suzi cable and trailer electrical failure? We deliver the replacement to your breakdown location across Sydney. Call or book online now.",
   alternates: { canonical: "/" },
 };
 
@@ -66,8 +66,8 @@ export default function Home() {
           </p>
           <EmergencyCTAGroup className="mt-8 flex-wrap" />
           <p className="mt-4 text-xs text-foreground-muted">
-            Fleet, caravan, camper trailer, and horse float electrical connections. Call or
-            WhatsApp for the fastest response.
+            Fleet, caravan, camper trailer, and horse float electrical connections. Call for the
+            fastest response.
           </p>
           <a href="#cable-gallery" className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-accent underline underline-offset-4">Explore cables & connections ↓</a>
           </div>

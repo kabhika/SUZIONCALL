@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
-import { telHref, whatsappHref } from "@/lib/utils";
+import { telHref } from "@/lib/utils";
 
 const navLinks = [
   { href: "/fleets", label: "Fleet & Commercial" },
@@ -40,17 +40,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 sm:flex">
-          <a
-            href={whatsappHref(
-              siteConfig.contact.whatsappE164,
-              siteConfig.whatsappMessageTemplate(siteConfig.brand.name)
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tap-target flex items-center rounded-md border border-border-subtle px-4 py-2 text-sm font-semibold text-foreground transition hover:border-accent"
-          >
-            WhatsApp
-          </a>
           <a
             href={telHref(siteConfig.contact.phoneE164)}
             className="tap-target flex items-center justify-center rounded-md bg-accent px-4 py-2.5 text-base font-bold text-accent-foreground transition hover:bg-accent-strong"

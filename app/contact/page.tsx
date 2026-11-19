@@ -8,7 +8,7 @@ import { telHref } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Call, WhatsApp, or book online for emergency Suzi cable delivery in Sydney. Fast callback for fleet, caravan, and commercial trailer breakdowns.",
+    "Call or book online for emergency Suzi cable delivery in Sydney. Fast callback for fleet, caravan, and commercial trailer breakdowns.",
   alternates: { canonical: "/contact" },
 };
 
@@ -20,8 +20,7 @@ export default function ContactPage() {
       <header className="mx-auto max-w-2xl px-4 pt-8 pb-2 sm:px-6">
         <h1 className="text-3xl font-bold text-foreground sm:text-4xl">Contact Us</h1>
         <p className="mt-3 text-foreground-muted">
-          Call or WhatsApp for the fastest response. Or book online below and we will call you
-          back.
+          Call for the fastest response. Or book online below and we will call you back.
         </p>
         <EmergencyCTAGroup className="mt-6" showBook={false} />
 

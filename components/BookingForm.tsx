@@ -5,7 +5,7 @@ import { useFormStatus } from "react-dom";
 import Link from "next/link";
 import { submitBooking, type BookingActionState } from "@/app/book/actions";
 import { cableCategories, siteConfig } from "@/site.config";
-import { telHref, whatsappHref } from "@/lib/utils";
+import { telHref } from "@/lib/utils";
 import { trackEvent } from "@/lib/analytics";
 
 const initialState: BookingActionState = { status: "idle" };
@@ -97,17 +97,6 @@ export function BookingForm() {
             className="tap-target flex flex-1 items-center justify-center rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground"
           >
             Call {siteConfig.contact.phoneDisplay}
-          </a>
-          <a
-            href={whatsappHref(
-              siteConfig.contact.whatsappE164,
-              siteConfig.whatsappMessageTemplate(siteConfig.brand.name)
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tap-target flex flex-1 items-center justify-center rounded-md border border-border-subtle px-5 py-3 text-sm font-semibold text-foreground"
-          >
-            WhatsApp Us
           </a>
         </div>
         <p className="mt-3 text-xs text-foreground-muted">
@@ -312,20 +301,6 @@ export function BookingForm() {
           </select>
         </div>
       </div>
-
-      <fieldset>
-        <legend className="block text-sm font-medium text-foreground">Preferred contact</legend>
-        <div className="mt-1.5 flex gap-4">
-          <label className="tap-target flex items-center gap-2 text-sm text-foreground-muted">
-            <input type="radio" name="preferredContact" value="call" defaultChecked required />
-            Call
-          </label>
-          <label className="tap-target flex items-center gap-2 text-sm text-foreground-muted">
-            <input type="radio" name="preferredContact" value="whatsapp" />
-            WhatsApp
-          </label>
-        </div>
-      </fieldset>
 
       <label className="flex items-start gap-3 text-sm text-foreground-muted">
         <input type="checkbox" name="consent" required className="tap-target mt-0.5" />

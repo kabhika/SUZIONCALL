@@ -75,7 +75,7 @@ export default function SuziCableGuidePage() {
         <section>
           <h2 className="text-xl font-bold text-foreground">Get the Right Cable Delivered</h2>
           <p className="mt-3">
-            Not sure which pin count or connector you need? Call or WhatsApp us — describe your
+            Not sure which pin count or connector you need? Call us — describe your
             trailer type and current plug and we will help you identify the right cable, then
             dispatch it to you. Or{" "}
             <Link href="/book" className="text-accent hover:underline">

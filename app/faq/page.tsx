@@ -20,7 +20,7 @@ export default function FaqPage() {
           Frequently Asked Questions
         </h1>
         <p className="mt-3 text-foreground-muted">
-          Still have a question? Call or WhatsApp us directly.
+          Still have a question? Call us directly.
         </p>
         <EmergencyCTAGroup className="mt-6" showBook={false} />
       </header>

@@ -23,7 +23,7 @@ export async function submitBooking(
     issue: formData.get("issue"),
     cableType: formData.get("cableType"),
     urgency: formData.get("urgency"),
-    preferredContact: formData.get("preferredContact"),
+    preferredContact: formData.get("preferredContact") ?? "call",
     consent: formData.get("consent") === "on",
     company: formData.get("company") ?? "",
   };
@@ -63,7 +63,7 @@ export async function submitBooking(
       console.error("Supabase booking insert failed:", error.message);
       return {
         status: "error",
-        message: "We could not save your request. Please call or WhatsApp us directly.",
+        message: "We could not save your request. Please call us directly.",
       };
     }
   } else {

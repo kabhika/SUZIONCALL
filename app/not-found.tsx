@@ -7,8 +7,7 @@ export default function NotFound() {
       <span className="text-sm font-semibold uppercase tracking-wide text-accent">404</span>
       <h1 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">Page Not Found</h1>
       <p className="mt-4 text-foreground-muted">
-        That page does not exist. If you are dealing with a breakdown right now, call or WhatsApp
-        us directly.
+        That page does not exist. If you are dealing with a breakdown right now, call us directly.
       </p>
       <EmergencyCTAGroup className="mt-6" />
       <Link href="/" className="mt-8 text-sm text-accent hover:underline">

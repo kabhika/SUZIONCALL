@@ -2,7 +2,7 @@ const steps = [
   {
     number: "01",
     title: "Request",
-    description: "Call, WhatsApp, or book online. Tell us your location and what has failed.",
+    description: "Call or book online. Tell us your location and what has failed.",
   },
   {
     number: "02",

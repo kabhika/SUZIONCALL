@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { products } from "@/lib/product-catalog";
 import { siteConfig } from "@/site.config";
+import { telHref } from "@/lib/utils";
 
 
 
 export function ProductGallery() {
-  const message = encodeURIComponent("Hi SuziOnCall, please help me match a replacement cable. I can send photos of both connector ends, my vehicle details and location.");
   return (
     <section id="cable-gallery" aria-labelledby="gallery-heading" className="scroll-mt-24 border-y border-border-subtle bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-accent">Find your connection</p>
         <h2 id="gallery-heading" className="mt-3 text-2xl font-bold sm:text-3xl">A cable for the journey ahead.</h2>
-        <p className="mt-3 max-w-2xl text-foreground-muted">From prime movers and semi-trailers to caravans, camper trailers and horse floats. Explore the connections below, then send us your plug photos for the right match.</p>
+        <p className="mt-3 max-w-2xl text-foreground-muted">From prime movers and semi-trailers to caravans, camper trailers and horse floats. Explore the connections below, then call us for the right match.</p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <article key={product.id} className="overflow-hidden rounded-xl border border-border-subtle bg-background">
@@ -33,9 +33,9 @@ export function ProductGallery() {
           ))}
           <div className="flex flex-col justify-center rounded-xl border border-accent/30 bg-surface-raised p-6">
             <p className="text-xs uppercase tracking-widest text-accent">Unsure which one?</p>
-            <h3 className="mt-3 text-xl font-semibold">Send a photo. We’ll help match it.</h3>
-            <p className="mt-3 text-sm text-foreground-muted">Show both connector ends and tell us your truck or trailer details. We’ll check the connection, voltage and length with you.</p>
-            <a href={`https://wa.me/${siteConfig.contact.whatsappE164}?text=${message}`} target="_blank" rel="noopener noreferrer" className="tap-target mt-6 inline-flex items-center justify-center rounded-md bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground">Match my cable on WhatsApp</a>
+            <h3 className="mt-3 text-xl font-semibold">Call us. We’ll help you match it.</h3>
+            <p className="mt-3 text-sm text-foreground-muted">Describe both connector ends and your truck or trailer details. We’ll check the connection, voltage and length with you.</p>
+            <a href={telHref(siteConfig.contact.phoneE164)} className="tap-target mt-6 inline-flex items-center justify-center rounded-md bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground">Call us to match my cable</a>
           </div>
         </div>
         <p className="mt-5 text-xs text-foreground-muted">Vehicle types are a guide, not a fitment guarantee. We confirm connector type, pin layout, voltage, length and availability before dispatch. Stock images are AI-enhanced; select one to view the original photo. Other images illustrate cable categories, not exact makes or models.</p>

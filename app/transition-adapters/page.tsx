@@ -72,7 +72,7 @@ export default function TransitionAdaptersPage() {
         <section>
           <h2 className="text-xl font-bold text-foreground">Get an Adapter Delivered</h2>
           <p className="mt-3 text-sm text-foreground-muted">
-            Call or WhatsApp with your prime mover and trailer connector types (or a photo of
+            Call us with your prime mover and trailer connector types (or a photo of
             each plug) and we will confirm the right adapter and dispatch it. See our{" "}
             <Link href="/fleets" className="text-accent hover:underline">
               full fleet and commercial services

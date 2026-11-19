@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
-import { telHref, whatsappHref, cn } from "@/lib/utils";
+import { telHref, cn } from "@/lib/utils";
 import { trackEvent } from "@/lib/analytics";
 
 type Props = {
@@ -34,21 +34,6 @@ export function EmergencyCTAGroup({ className, variant = "default", showBook = t
           <span className={isCompact ? "inline" : "hidden sm:inline"}>Call </span>
           {siteConfig.contact.phonesInlineDisplay}
         </span>
-      </a>
-      <a
-        href={whatsappHref(
-          siteConfig.contact.whatsappE164,
-          siteConfig.whatsappMessageTemplate(siteConfig.brand.name)
-        )}
-        onClick={() => trackEvent("cta_whatsapp_click")}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cn(
-          "tap-target flex items-center justify-center gap-2 rounded-md border border-border-subtle bg-surface-raised px-6 font-semibold text-foreground transition hover:border-accent",
-          isCompact ? "py-2.5 text-sm" : "py-3.5 text-base"
-        )}
-      >
-        WhatsApp Us
       </a>
       {showBook && (
         <Link

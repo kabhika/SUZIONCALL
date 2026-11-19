@@ -2,7 +2,6 @@
 
 export type AnalyticsEvent =
   | "cta_call_click"
-  | "cta_whatsapp_click"
   | "booking_form_start"
   | "booking_form_submit_success"
   | "booking_form_error";
