@@ -93,22 +93,22 @@ Eight generations minimum; budget 12–20 with retakes.
 
 ## VOICEOVER SCRIPTS
 
-### 30s master (~60 words, calm Australian male)
+### 30s master (calm Australian male; reads both numbers — Pushpender's first)
 
 > On the edge of Sydney, a trailer goes dark. The suzi cable's failed — no spare.
 > Stuck. Lights down, that load's going nowhere.
-> One call to SuziOnCall — we take the truck, the trailer, the cable type.
-> The right coil goes straight into a van.
-> And we come to you.
+> One call to SuziOnCall — truck, trailer, cable type.
+> The right coil goes straight into a van. And we come to you.
 > Plugged in. Checked. Lights back on.
-> SuziOnCall. Emergency suzi cable delivery, Sydney-wide. Call 0467 604 791.
+> SuziOnCall. Emergency suzi cable delivery, Sydney-wide.
+> Call 0430 825 007 — or 0467 604 791.
 
 ### 15s cut-down (Scenes 1 → 2 → 6 → end card)
 
 > Trailer lights down? No spare suzi cable?
-> One call. We deliver the right coil to you — anywhere in Sydney.
+> One call — we deliver the right coil, anywhere in Sydney.
 > Plugged in. Lights on. Rolling again.
-> SuziOnCall. Call 0467 604 791.
+> SuziOnCall. Call 0430 825 007 — or 0467 604 791.
 
 ### End card (built in the edit, on #0b0e13 — never AI-generated)
 
