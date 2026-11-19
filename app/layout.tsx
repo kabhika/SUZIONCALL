@@ -81,6 +81,17 @@ export default function RootLayout({
     image: `${siteConfig.brand.url}${siteConfig.brand.assets.icon512}`,
     url: siteConfig.brand.url,
     telephone: siteConfig.contact.phoneE164,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.contact.phoneE164,
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.contact.phoneSecondaryE164,
+        name: siteConfig.contact.phoneSecondaryLabel,
+      },
+    ],
     areaServed: siteConfig.hub.areaServed.map((area) => ({
       "@type": "AdministrativeArea",
       name: area,

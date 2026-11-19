@@ -56,6 +56,10 @@ export const siteConfig = {
     phoneE164: "+61467604791",
     whatsappE164: "61467604791",
     email: "info@suzioncall.com.au",
+    // Secondary line, labelled by name only — no role titles.
+    phoneSecondaryLabel: "Pushpender",
+    phoneSecondaryDisplay: "0430 825 007",
+    phoneSecondaryE164: "+61430825007",
   },
   // TODO: confirm live hours before publishing — do not claim 24/7 unless true.
   hours: {

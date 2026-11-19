@@ -20,11 +20,14 @@ export function EmergencyCTAGroup({ className, variant = "default", showBook = t
         href={telHref(siteConfig.contact.phoneE164)}
         onClick={() => trackEvent("cta_call_click")}
         className={cn(
-          "tap-target flex items-center justify-center gap-2 rounded-md bg-accent px-6 font-semibold text-accent-foreground transition hover:bg-accent-strong",
+          "tap-target flex flex-col items-center justify-center gap-0.5 rounded-md bg-accent px-6 font-semibold text-accent-foreground transition hover:bg-accent-strong",
           isCompact ? "py-2.5 text-sm" : "py-3.5 text-base"
         )}
       >
-        Call {siteConfig.contact.phoneDisplay}
+        <span>Call {siteConfig.contact.phoneDisplay}</span>
+        <span className="text-xs font-normal">
+          {siteConfig.contact.phoneSecondaryLabel} · {siteConfig.contact.phoneSecondaryDisplay}
+        </span>
       </a>
       <a
         href={whatsappHref(

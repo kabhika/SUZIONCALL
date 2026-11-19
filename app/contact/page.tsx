@@ -30,6 +30,14 @@ export default function ContactPage() {
             <dd className="mt-1 text-foreground-muted">{siteConfig.contact.phoneDisplay}</dd>
           </div>
           <div>
+            <dt className="font-semibold text-foreground">
+              {siteConfig.contact.phoneSecondaryLabel}
+            </dt>
+            <dd className="mt-1 text-foreground-muted">
+              {siteConfig.contact.phoneSecondaryDisplay}
+            </dd>
+          </div>
+          <div>
             <dt className="font-semibold text-foreground">Email</dt>
             <dd className="mt-1 text-foreground-muted">{siteConfig.contact.email}</dd>
           </div>

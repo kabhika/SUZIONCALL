@@ -30,6 +30,17 @@ export default function Home() {
       "@type": "AutomotiveBusiness",
       name: siteConfig.brand.name,
       telephone: siteConfig.contact.phoneE164,
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: siteConfig.contact.phoneE164,
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: siteConfig.contact.phoneSecondaryE164,
+          name: siteConfig.contact.phoneSecondaryLabel,
+        },
+      ],
     },
     areaServed: siteConfig.hub.areaServed,
     description:

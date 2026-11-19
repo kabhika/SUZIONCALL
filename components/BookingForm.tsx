@@ -110,6 +110,15 @@ export function BookingForm() {
             WhatsApp Us
           </a>
         </div>
+        <p className="mt-3 text-xs text-foreground-muted">
+          {siteConfig.contact.phoneSecondaryLabel} ·{" "}
+          <a
+            href={telHref(siteConfig.contact.phoneSecondaryE164)}
+            className="font-semibold text-accent"
+          >
+            {siteConfig.contact.phoneSecondaryDisplay}
+          </a>
+        </p>
         <div className="mx-auto mt-8 max-w-sm text-left text-sm text-foreground-muted">
           <p className="font-semibold text-foreground">Have ready for the callback:</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">

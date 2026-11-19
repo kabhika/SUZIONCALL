@@ -32,6 +32,14 @@ export function SiteFooter() {
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </p>
+              <p>
+                <a
+                  href={telHref(siteConfig.contact.phoneSecondaryE164)}
+                  className="text-foreground-muted transition hover:text-accent"
+                >
+                  {siteConfig.contact.phoneSecondaryLabel} · {siteConfig.contact.phoneSecondaryDisplay}
+                </a>
+              </p>
               <p className="text-foreground-muted">{siteConfig.contact.email}</p>
               <p className="text-foreground-muted">
                 ACN {siteConfig.brand.acn} · ABN {siteConfig.brand.abn}
