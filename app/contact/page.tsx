@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EmergencyCTAGroup } from "@/components/EmergencyCTAGroup";
 import { BookingForm } from "@/components/BookingForm";
 import { siteConfig } from "@/site.config";
+import { telHref } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -27,14 +28,19 @@ export default function ContactPage() {
         <dl className="mt-8 grid gap-4 text-sm sm:grid-cols-2">
           <div>
             <dt className="font-semibold text-foreground">Phone</dt>
-            <dd className="mt-1 text-foreground-muted">{siteConfig.contact.phoneDisplay}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-foreground">
-              {siteConfig.contact.phoneSecondaryLabel}
-            </dt>
             <dd className="mt-1 text-foreground-muted">
-              {siteConfig.contact.phoneSecondaryDisplay}
+              <a
+                href={telHref(siteConfig.contact.phoneE164)}
+                className="font-semibold text-accent hover:underline"
+              >
+                {siteConfig.contact.phoneDisplay}
+              </a>{" / "}
+              <a
+                href={telHref(siteConfig.contact.phoneSecondaryE164)}
+                className="transition hover:text-accent hover:underline"
+              >
+                {siteConfig.contact.phoneSecondaryDisplay}
+              </a>
             </dd>
           </div>
           <div>

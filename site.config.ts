@@ -52,14 +52,14 @@ export const siteConfig = {
     },
   },
   contact: {
-    phoneDisplay: "0467 604 791",
-    phoneE164: "+61467604791",
+    phoneDisplay: "0430 825 007",
+    phoneE164: "+61430825007",
     whatsappE164: "61467604791",
     email: "info@suzioncall.com.au",
     // Secondary line, labelled by name only — no role titles.
-    phoneSecondaryLabel: "Pushpender",
-    phoneSecondaryDisplay: "0430 825 007",
-    phoneSecondaryE164: "+61430825007",
+    phoneSecondaryLabel: "Abhishek",
+    phoneSecondaryDisplay: "0467 604 791",
+    phoneSecondaryE164: "+61467604791",
   },
   // TODO: confirm live hours before publishing — do not claim 24/7 unless true.
   hours: {

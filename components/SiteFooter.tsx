@@ -30,14 +30,12 @@ export function SiteFooter() {
               <p>
                 <a href={telHref(siteConfig.contact.phoneE164)} className="font-semibold text-accent">
                   {siteConfig.contact.phoneDisplay}
-                </a>
-              </p>
-              <p>
+                </a>{" / "}
                 <a
                   href={telHref(siteConfig.contact.phoneSecondaryE164)}
                   className="text-foreground-muted transition hover:text-accent"
                 >
-                  {siteConfig.contact.phoneSecondaryLabel} · {siteConfig.contact.phoneSecondaryDisplay}
+                  {siteConfig.contact.phoneSecondaryDisplay}
                 </a>
               </p>
               <p className="text-foreground-muted">{siteConfig.contact.email}</p>
