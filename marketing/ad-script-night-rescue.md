@@ -113,7 +113,8 @@ Eight generations minimum; budget 12–20 with retakes.
 ### End card (built in the edit, on #0b0e13 — never AI-generated)
 
 - SuziOnCall logo (shield + wordmark, from `public/brand/logo-dark-bg.png`)
-- **0467 604 791 · suzioncall.com.au**
+- **0467 604 791 · 0430 825 007 (Pushpender)** — both numbers shown on the end card; the VO speaks only 0467 604 791 (reading two numbers costs ~4 s)
+- **suzioncall.com.au**
 - WhatsApp · Book online
 - *A unit of Coralstone Services Group Pty Ltd · ACN 690 335 034 · ABN 51 690 335 034*
 
