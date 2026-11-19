@@ -27,10 +27,12 @@ export function EmergencyCTAGroup({ className, variant = "default", showBook = t
         <span
           className={cn(
             "whitespace-nowrap font-extrabold tracking-tight",
-            isCompact ? "text-base" : "text-xl"
+            isCompact ? "text-base" : "text-lg sm:text-xl"
           )}
         >
-          Call {siteConfig.contact.phonesInlineDisplay}
+          {/* Prefix hidden below sm — the spaced numbers are too wide for small screens with it. */}
+          <span className={isCompact ? "inline" : "hidden sm:inline"}>Call </span>
+          {siteConfig.contact.phonesInlineDisplay}
         </span>
       </a>
       <a

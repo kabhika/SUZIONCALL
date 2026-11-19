@@ -58,7 +58,7 @@ export const siteConfig = {
     whatsappE164: "61430825007",
     email: "info@suzioncall.com.au",
     // Both numbers on one line on CTA buttons — no names on the site.
-    phonesInlineDisplay: "0430825007/0467604791",
+    phonesInlineDisplay: "0430 825 007 / 0467 604 791",
     phoneSecondaryDisplay: "0467 604 791",
     phoneSecondaryE164: "+61467604791",
   },
