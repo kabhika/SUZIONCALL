@@ -93,7 +93,12 @@ export default function RootLayout({
     },
     parentOrganization: {
       "@type": "Organization",
-      name: "Coralstone Group",
+      name: siteConfig.brand.parentCompanyName,
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "ACN",
+        value: siteConfig.brand.acn,
+      },
     },
   };
 

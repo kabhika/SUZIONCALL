@@ -24,7 +24,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground">Our Service</h2>
             <p className="mt-2">
-              {siteConfig.brand.name} ({siteConfig.brand.parentLine}, ABN {siteConfig.brand.abn})
+              {siteConfig.brand.name} ({siteConfig.brand.parentLine}, ACN {siteConfig.brand.acn},
+              ABN {siteConfig.brand.abn})
               supplies and delivers trailer electrical cables, coils, and connectors. A booking
               request or call is a request for a callback and quote, not a confirmed order until
               we confirm pricing, availability, and delivery details with you directly.

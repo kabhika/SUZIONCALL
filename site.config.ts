@@ -31,11 +31,14 @@ export const siteConfig = {
   brand: {
     name: "SuziOnCall",
     fullName: "SuziOnCall",
-    parentLine: "A Coralstone Group Company",
+    parentLine: "A unit of Coralstone Services Group Pty Ltd",
+    parentCompanyName: "Coralstone Services Group Pty Ltd",
     tagline: "Emergency Suzi Cable Replacement & Delivery",
     domain: "suzioncall.com.au",
     url: "https://suzioncall.com.au",
-    abn: "51690335034",
+    // Verified against ASIC record supplied 2026-11-19 (ACN 690 335 034).
+    abn: "51 690 335 034",
+    acn: "690 335 034",
     locale: "en-AU",
     assets: {
       // Full lockup has a white wordmark — dark backgrounds ONLY.

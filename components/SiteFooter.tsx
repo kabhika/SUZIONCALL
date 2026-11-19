@@ -33,7 +33,9 @@ export function SiteFooter() {
                 </a>
               </p>
               <p className="text-foreground-muted">{siteConfig.contact.email}</p>
-              <p className="text-foreground-muted">ABN {siteConfig.brand.abn}</p>
+              <p className="text-foreground-muted">
+                ACN {siteConfig.brand.acn} · ABN {siteConfig.brand.abn}
+              </p>
             </div>
           </div>
 
@@ -113,8 +115,8 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-border-subtle pt-6 text-xs text-foreground-muted">
           <p>
-            &copy; {year} {siteConfig.brand.name}. {siteConfig.brand.parentLine}. ABN{" "}
-            {siteConfig.brand.abn}.
+            &copy; {year} {siteConfig.brand.name}. {siteConfig.brand.parentLine}. ACN{" "}
+            {siteConfig.brand.acn} · ABN {siteConfig.brand.abn}.
           </p>
           <p className="mt-2 max-w-3xl">
             Trailer lighting and braking connections are safety-critical and regulated. If your

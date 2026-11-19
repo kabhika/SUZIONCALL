@@ -23,6 +23,14 @@ export default function PrivacyPage() {
 
         <div className="mt-8 space-y-6 text-sm text-foreground-muted">
           <section>
+            <h2 className="text-lg font-semibold text-foreground">Who We Are</h2>
+            <p className="mt-2">
+              {siteConfig.brand.name} ({siteConfig.brand.parentLine}, ACN {siteConfig.brand.acn},
+              ABN {siteConfig.brand.abn}) operates this website and handles the information
+              described below.
+            </p>
+          </section>
+          <section>
             <h2 className="text-lg font-semibold text-foreground">Information We Collect</h2>
             <p className="mt-2">
               When you request a callback through our website, call, or message us, we collect

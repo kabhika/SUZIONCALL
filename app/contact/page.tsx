@@ -38,6 +38,10 @@ export default function ContactPage() {
             <dd className="mt-1 text-foreground-muted">{siteConfig.hub.displayLocation}</dd>
           </div>
           <div>
+            <dt className="font-semibold text-foreground">ACN</dt>
+            <dd className="mt-1 text-foreground-muted">{siteConfig.brand.acn}</dd>
+          </div>
+          <div>
             <dt className="font-semibold text-foreground">ABN</dt>
             <dd className="mt-1 text-foreground-muted">{siteConfig.brand.abn}</dd>
           </div>
