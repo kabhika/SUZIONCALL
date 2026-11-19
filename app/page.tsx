@@ -38,7 +38,6 @@ export default function Home() {
         {
           "@type": "ContactPoint",
           telephone: siteConfig.contact.phoneSecondaryE164,
-          name: siteConfig.contact.phoneSecondaryLabel,
         },
       ],
     },

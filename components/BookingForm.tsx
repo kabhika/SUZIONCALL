@@ -111,7 +111,7 @@ export function BookingForm() {
           </a>
         </div>
         <p className="mt-3 text-xs text-foreground-muted">
-          {siteConfig.contact.phoneSecondaryLabel} ·{" "}
+          Or call{" "}
           <a
             href={telHref(siteConfig.contact.phoneSecondaryE164)}
             className="font-semibold text-accent"

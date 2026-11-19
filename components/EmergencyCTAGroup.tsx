@@ -15,18 +15,22 @@ export function EmergencyCTAGroup({ className, variant = "default", showBook = t
   const isCompact = variant === "compact";
 
   return (
-    <div className={cn("flex flex-col gap-3 sm:flex-row", className)}>
+    <div className={cn("flex flex-col gap-3 sm:flex-row sm:flex-wrap", className)}>
       <a
         href={telHref(siteConfig.contact.phoneE164)}
         onClick={() => trackEvent("cta_call_click")}
         className={cn(
-          "tap-target flex flex-col items-center justify-center gap-0.5 rounded-md bg-accent px-6 font-semibold text-accent-foreground transition hover:bg-accent-strong",
-          isCompact ? "py-2.5 text-sm" : "py-3.5 text-base"
+          "tap-target flex items-center justify-center rounded-md bg-accent px-6 font-bold text-accent-foreground transition hover:bg-accent-strong",
+          isCompact ? "py-2.5 text-sm" : "py-4 text-base"
         )}
       >
-        <span>Call {siteConfig.contact.phoneDisplay}</span>
-        <span className="text-xs font-normal">
-          {siteConfig.contact.phoneSecondaryLabel} · {siteConfig.contact.phoneSecondaryDisplay}
+        <span
+          className={cn(
+            "whitespace-nowrap font-extrabold tracking-tight",
+            isCompact ? "text-base" : "text-xl"
+          )}
+        >
+          Call {siteConfig.contact.phonesInlineDisplay}
         </span>
       </a>
       <a

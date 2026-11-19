@@ -53,11 +53,10 @@ export function SiteHeader() {
           </a>
           <a
             href={telHref(siteConfig.contact.phoneE164)}
-            className="tap-target flex flex-col items-center justify-center gap-0.5 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+            className="tap-target flex items-center justify-center rounded-md bg-accent px-4 py-2.5 text-base font-bold text-accent-foreground transition hover:bg-accent-strong"
           >
-            <span>Call {siteConfig.contact.phoneDisplay}</span>
-            <span className="text-xs font-normal">
-              {siteConfig.contact.phoneSecondaryLabel} · {siteConfig.contact.phoneSecondaryDisplay}
+            <span className="whitespace-nowrap text-lg font-extrabold tracking-tight">
+              Call {siteConfig.contact.phonesInlineDisplay}
             </span>
           </a>
         </div>

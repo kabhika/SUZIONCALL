@@ -89,7 +89,6 @@ export default function RootLayout({
       {
         "@type": "ContactPoint",
         telephone: siteConfig.contact.phoneSecondaryE164,
-        name: siteConfig.contact.phoneSecondaryLabel,
       },
     ],
     areaServed: siteConfig.hub.areaServed.map((area) => ({

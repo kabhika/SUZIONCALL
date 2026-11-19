@@ -54,10 +54,11 @@ export const siteConfig = {
   contact: {
     phoneDisplay: "0430 825 007",
     phoneE164: "+61430825007",
-    whatsappE164: "61467604791",
+    // WhatsApp goes to the primary line (Pushpinder), which handles cable identification.
+    whatsappE164: "61430825007",
     email: "info@suzioncall.com.au",
-    // Secondary line, labelled by name only — no role titles.
-    phoneSecondaryLabel: "Abhishek",
+    // Both numbers on one line on CTA buttons — no names on the site.
+    phonesInlineDisplay: "0430825007/0467604791",
     phoneSecondaryDisplay: "0467 604 791",
     phoneSecondaryE164: "+61467604791",
   },
