@@ -15,7 +15,6 @@ import { BookingForm } from "@/components/BookingForm";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Emergency Suzi Cable Replacement Sydney",
   description:
     "Suzi cable and trailer electrical failure? We deliver the replacement to your breakdown location across Sydney. Call or book online now.",
   alternates: { canonical: "/" },
