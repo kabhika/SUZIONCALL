@@ -51,6 +51,20 @@ export default function ContactPage() {
             <dd className="mt-1 text-foreground-muted">{siteConfig.hub.displayLocation}</dd>
           </div>
           <div>
+            <dt className="font-semibold text-foreground">Collection Point</dt>
+            <dd className="mt-1 text-foreground-muted">
+              {siteConfig.hub.addressLine}{" "}
+              <a
+                href={siteConfig.hub.mapsDirectionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-accent hover:underline"
+              >
+                Get directions
+              </a>
+            </dd>
+          </div>
+          <div>
             <dt className="font-semibold text-foreground">ACN</dt>
             <dd className="mt-1 text-foreground-muted">{siteConfig.brand.acn}</dd>
           </div>

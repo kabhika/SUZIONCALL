@@ -68,10 +68,14 @@ export const siteConfig = {
   hub: {
     displayLocation: "Western Sydney",
     areaServed: ["Sydney", "Greater Sydney", "New South Wales"],
+    addressLine: "3 Paint St, Box Hill NSW 2765",
+    addressLocality: "Box Hill",
+    addressRegion: "NSW",
+    postalCode: "2765",
+    mapsDirectionsUrl: "https://maps.google.com/?cid=914193758194076105",
   },
   social: {
-    // TODO: add Google Business Profile URL once created
-    googleBusinessProfileUrl: "",
+    googleBusinessProfileUrl: "https://g.page/r/CcmJCSVh3q8MEBM",
   },
 };
 

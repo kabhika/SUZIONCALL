@@ -97,10 +97,15 @@ export default function RootLayout({
     })),
     address: {
       "@type": "PostalAddress",
-      addressLocality: siteConfig.hub.displayLocation,
-      addressRegion: "NSW",
+      streetAddress: siteConfig.hub.addressLine,
+      addressLocality: siteConfig.hub.addressLocality,
+      addressRegion: siteConfig.hub.addressRegion,
+      postalCode: siteConfig.hub.postalCode,
       addressCountry: "AU",
     },
+    sameAs: siteConfig.social.googleBusinessProfileUrl
+      ? [siteConfig.social.googleBusinessProfileUrl]
+      : undefined,
     parentOrganization: {
       "@type": "Organization",
       name: siteConfig.brand.parentCompanyName,
