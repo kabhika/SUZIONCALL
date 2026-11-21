@@ -60,10 +60,10 @@ export const siteConfig = {
     phoneSecondaryDisplay: "0467 604 791",
     phoneSecondaryE164: "+61467604791",
   },
-  // TODO: confirm live hours before publishing — do not claim 24/7 unless true.
+  // Confirmed by operator 2026-11-21: emergency line is answered 24/7 (most calls evenings).
   hours: {
-    display: "Call for current dispatch hours",
-    note: "TODO: confirm phone line hours and dispatch hours with operator",
+    display: "Open 24 hours, 7 days",
+    note: "Emergency line answered around the clock",
   },
   hub: {
     displayLocation: "Western Sydney",

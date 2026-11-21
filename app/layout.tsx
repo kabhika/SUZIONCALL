@@ -106,6 +106,22 @@ export default function RootLayout({
     sameAs: siteConfig.social.googleBusinessProfileUrl
       ? [siteConfig.social.googleBusinessProfileUrl]
       : undefined,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
     parentOrganization: {
       "@type": "Organization",
       name: siteConfig.brand.parentCompanyName,

@@ -65,6 +65,12 @@ export default function ContactPage() {
             </dd>
           </div>
           <div>
+            <dt className="font-semibold text-foreground">Hours</dt>
+            <dd className="mt-1 text-foreground-muted">
+              {siteConfig.hours.display} — {siteConfig.hours.note.toLowerCase()}
+            </dd>
+          </div>
+          <div>
             <dt className="font-semibold text-foreground">ACN</dt>
             <dd className="mt-1 text-foreground-muted">{siteConfig.brand.acn}</dd>
           </div>
